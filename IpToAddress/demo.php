@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wenjunting1@me.com
- * Date: 2019/2/14
- * Time: 15:34
- * Class ${NAME}
- */
 require_once 'IpSearch.php';
 set_time_limit(0);
 $f = fopen('ip.txt',"r");
@@ -21,5 +14,6 @@ while ($ip = fgets($f,20480))
 
     $str = $ip."\t".$country."\t".$province."\t".$city."\n";
     file_put_contents('ip2.txt',$str,FILE_APPEND);
+    echo 1;
 }
 fclose($f);
